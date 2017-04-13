@@ -1,0 +1,76 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "APP UBB FULL"
+        }
+    }
+}
