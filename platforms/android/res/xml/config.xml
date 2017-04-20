@@ -62,11 +62,11 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <name>SmartAPP</name>
+    <name>Animal Finder</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Animal Finder, una aplicación que ayuda a buscar a tu "mejor amigo".
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="searique@alumnos.ubiobio.cl">
         PhoneGap Team
     </author>
     <content src="index.html" />

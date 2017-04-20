@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ubb.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>APP UBB FULL</name>
+<widget id="com.app.smart" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Animal Finder</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Animal Finder, una aplicación que ayuda a buscar a tu "mejor amigo".
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="searique@alumnos.ubiobio.cl">
         PhoneGap Team
     </author>
     <content src="index.html" />
