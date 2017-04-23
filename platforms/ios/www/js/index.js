@@ -10,8 +10,12 @@ var mainView = myApp.addView('.view-main', {
 document.addEventListener("deviceready", function(){
     $("#iniciar_sesion").bind("click",iniciar_session);
 	$('#camara').bind('click', camara);
+	$('#pet1').bind('click', notificacion);
+	$('#pet2').bind('click', notificacion);
 });
-
+function notificacion(){
+	myApp.alert('Se ha enviado una notificación al dueño');
+}
 function camara(){
     navigator.camera.getPicture(function(photo){
 
