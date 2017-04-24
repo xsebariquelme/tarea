@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Package IgnorableNamespaces="uap mp" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10">
-    <Identity Name="com.app.afinder" Publisher="CN=$username$" Version="1.0.0.0" />
+    <Identity Name="com.app.smart" Publisher="CN=$username$" Version="1.0.0.0" />
     <mp:PhoneIdentity PhoneProductId="d08f05b0-1e15-11e7-86cc-874236ba834e" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
     <Properties>
         <DisplayName>Animal Finder</DisplayName>
-        <PublisherDisplayName>UBB Devs Team</PublisherDisplayName>
+        <PublisherDisplayName>PhoneGap Team</PublisherDisplayName>
         <Logo>images\StoreLogo.png</Logo>
         <Description>Animal Finder, una aplicación que ayuda a buscar a tu "mejor amigo".</Description>
     </Properties>
@@ -15,7 +15,7 @@
         <Resource Language="x-generate" />
     </Resources>
     <Applications>
-        <Application Id="com.app.afinder" StartPage="ms-appx-web://com.app.afinder/www/index.html">
+        <Application Id="com.app.smart" StartPage="ms-appx-web://com.app.smart/www/index.html">
             <uap:VisualElements BackgroundColor="#464646" Description="Animal Finder, una aplicación que ayuda a buscar a tu &quot;mejor amigo&quot;." DisplayName="Animal Finder" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
                 <uap:SplashScreen Image="images\splashscreen.png" />
                 <uap:DefaultTile ShortName="APP UBB FULL" Square310x310Logo="images\Square310x310Logo.png" Square71x71Logo="images\Square71x71Logo.png" Wide310x150Logo="images\Wide310x150Logo.png" />

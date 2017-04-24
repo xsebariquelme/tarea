@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-    <Identity Name="com.app.afinder" Publisher="CN=$username$" Version="1.0.0.0" />
+    <Identity Name="com.app.smart" Publisher="CN=$username$" Version="1.0.0.0" />
     <mp:PhoneIdentity PhoneProductId="d08f05b0-1e15-11e7-86cc-874236ba834e" PhonePublisherId="db093ed5-53b1-45f7-af72-751e8f36ab80" />
     <Properties>
         <DisplayName>Animal Finder</DisplayName>
-        <PublisherDisplayName>UBB Devs Team</PublisherDisplayName>
+        <PublisherDisplayName>PhoneGap Team</PublisherDisplayName>
         <Logo>images\StoreLogo.png</Logo>
         <Description>Animal Finder, una aplicación que ayuda a buscar a tu "mejor amigo".</Description>
     </Properties>
@@ -16,7 +16,7 @@
         <Resource Language="x-generate" />
     </Resources>
     <Applications>
-        <Application Id="com.app.afinder" StartPage="www/index.html">
+        <Application Id="com.app.smart" StartPage="www/index.html">
             <m3:VisualElements BackgroundColor="transparent" Description="Animal Finder, una aplicación que ayuda a buscar a tu &quot;mejor amigo&quot;." DisplayName="Animal Finder" ForegroundText="light" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
                 <m3:DefaultTile Square71x71Logo="images\Square71x71Logo.png" Wide310x150Logo="images\Wide310x150Logo.png">
                     <m3:ShowNameOnTiles>

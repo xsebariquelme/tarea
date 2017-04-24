@@ -14,7 +14,7 @@ document.addEventListener("deviceready", function(){
 	$('#pet2').bind('click', notificacion);
 });
 function notificacion(){
-	myApp.alert('Se ha enviado una notificación al dueño','Animal Finder');
+	myApp.alert('Se ha enviado una notificación al dueño');
 }
 function camara(){
     navigator.camera.getPicture(function(photo){
