@@ -1,1 +1,2 @@
-Animal Finder
+Aplicación: Animal Finder
+Alumnos: Remigio Fernandez / Sebastián Riquelme
