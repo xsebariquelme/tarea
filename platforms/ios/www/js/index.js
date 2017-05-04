@@ -14,7 +14,7 @@ document.addEventListener("deviceready", function(){
 	$('#pet2').bind('click', notificacion);
 });
 function notificacion(){
-	myApp.alert('Se ha enviado una notificación al dueño');
+	myApp.alert('Se ha enviado una notificación al dueño','Animal Finder');
 }
 function camara(){
     navigator.camera.getPicture(function(photo){
@@ -62,15 +62,15 @@ function iniciar_session(){
                     myApp.closeModal(".login-screen", true);
                 }else{
                     myApp.hidePreloader();
-                    myApp.alert("Error en los datos de sesión", "SmartAPP");
+                    myApp.alert("Error en los datos de sesión", "Animal Finder");
                 }
             },
             error: function(){
                 myApp.hidePreloader();
-                myApp.alert("Error en la Conexión", "SmartAPP");
+                myApp.alert("Error en la Conexión", "Animal Finder");
             }
         });
     }else{
-        myApp.alert("No hay datos ingresados", "SmartAPP");
+        myApp.alert("No hay datos ingresados", "Animal Finder");
     }
 }
