@@ -8,13 +8,31 @@ var mainView = myApp.addView('.view-main', {
 });
 
 document.addEventListener("deviceready", function(){
-    $("#iniciar_sesion").bind("click",iniciar_session);
+    $("#iniciar").bind("click",login);
+    $("#btnlogin").bind("click",iniciar_session);
+    $("#registro").bind("click",registro);
+    $("#btnregistro").bind("click",registro);
+    $("#btnback").bind("click",gotoindex);
+    $("#registrarcuenta").bind("click",registrarcuenta);
+    $("#back").bind("click",back);
 	$('#camara').bind('click', camara);
 	$('#pet1').bind('click', notificacion);
 	$('#pet2').bind('click', notificacion);
+    
 });
 function notificacion(){
 	myApp.alert('Se ha enviado una notificación al dueño','Animal Finder');
+}
+function registrarcuenta(){
+    window.location = "login.html";
+}
+function login(){
+    window.location = "login.html";
+
+}
+function gotoindex(){
+        window.location = "index.html";
+
 }
 function camara(){
     navigator.camera.getPicture(function(photo){
@@ -35,29 +53,35 @@ function camara(){
 }
 
 
+function registro(){
+    window.location = "registro.html";
+}
+function back(){
+  window.location = "login.html";  
+}
 function iniciar_session(){
     var icon_name = '<i class="f7-icons" style="font-size:14px;">person</i>';
     var icon_mail = '<i class="f7-icons" style="font-size:14px;">email</i>';
 
-    var correo  = $("#username").val();
+    var nombreuser  = $("#username").val();
     var pass    = $("#password").val();
 
-    if(correo.trim().length > 0 && pass.trim().length > 0){
+    if(nombreuser.trim().length > 0 && pass.trim().length > 0){
         myApp.showPreloader("Iniciando Sesión...");
         $.ajax({
             dataType: "json",
             type: "POST",
             data:{
-                user: correo,
+                user: nombreuser,
                 pass: pass
             },
-            url: "http://login-appmovilubb.rhcloud.com/",
+            url: "http://servicioswebmoviles.hol.es/index.php/WS_LOGIN",
             success: function(respuesta){
                 if(respuesta.resp === true){
                     $("#nosesion").hide();
                     $("#sesion").show();
                     $("#name").html(icon_name +" "+ respuesta.data.nombre);
-                    $("#mail").html(icon_mail +" "+ correo);
+                    $("#nombreuser").html(icon_mail +" "+ nombreuser);
                     myApp.hidePreloader();
                     myApp.closeModal(".login-screen", true);
                 }else{

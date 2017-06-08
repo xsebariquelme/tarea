@@ -892,7 +892,7 @@
                 navbar: navbarData
             };
         
-            if (navbarInnerContainer.f7NavbarInitialized && ((view && view.params.domCache) || (!view && $(navbarContainer).parents('.popup, .popover, .login-screen, .modal, .actions-modal, .picker-modal').length > 0))) {
+            if (navbarInnerContainer.f7NavbarInitialized && ((view && view.params.domCache) || (!view && $(navbarContainer).parents('.popup, .popover, .login-screen, .registro-screen, .modal, .actions-modal, .picker-modal').length > 0))) {
                 // Reinit Navbar
                 app.reinitNavbar(navbarContainer, navbarInnerContainer);
         
