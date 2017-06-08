@@ -38,7 +38,7 @@ function geo(){
             myApp.popup('.popup-geo');
         },
         function(error){
-            myApp.alert('Se ha producido un error','SMART@APP');
+            myApp.alert('Se ha producido un error','Animal Finder');
             myApp.hidePreloader();
         },
         {
@@ -75,14 +75,14 @@ function clima(){
                 },
                 error: function (xhr, status) {
                     myApp.hidePreloader();
-                    myApp.alert('Datos Incorrectos','APP-TEST');
+                    myApp.alert('Datos Incorrectos','Animal Finder');
                 }
             });
             myApp.hidePreloader();
             myApp.popup('.popup-clima');
         },
         function(error){
-            myApp.alert('Se ha producido un error','SMART@APP');
+            myApp.alert('Se ha producido un error','Animal Finder');
             myApp.hidePreloader();
         },
         {
@@ -98,7 +98,7 @@ function cam(){
         $('#img_cam').attr('src',photo);
         myApp.popup('.popup-cam');
     }, function(error){
-        myApp.alert('Error al tomar la fotografía','SMART@APP')
+        myApp.alert('Error al tomar la fotografía','Animal Finder')
     }, {
         quality:100
     });
