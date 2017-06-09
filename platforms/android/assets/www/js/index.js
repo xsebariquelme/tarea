@@ -24,10 +24,81 @@ function notificacion(){
 	myApp.alert('Se ha enviado una notificación al dueño','Animal Finder');
 }
 function registrarcuenta(){
-    window.location = "login.html";
+    var direccion = $('#direccion').val();
+    var nombres = $('#name').val();
+    var apellidoP = $('#apellidoP').val();
+    var apellidoP = $('#apellidoP').val();
+    var email = $('#correo').val();
+    var nick = $('#nick').val();
+    var pass = $('#pass').val();
+    myApp.showPreloader('Registrando...');
+      $.ajax({
+          dataType: 'json',
+          type: 'POST',
+          data: {
+              nombreUser:nick, 
+              pass:pass, 
+              nombres:nombres,
+              aPaterno:apellidoP,
+              aMaterno:apellidoM,
+              email:email,
+              direccion:direccion
+              
+          },
+          url: 'http://servicioswebmoviles.hol.es/index.php/WS_NUEVO_USUARIO',
+          success: function (data, status, xhr) {
+              if(data.guardado){
+                  myApp.hidePreloader();
+                  console.log("Registrado");
+                  window.location = "login.html";
+              }else{
+                  myApp.hidePreloader();
+                  var msg = data.info;
+                  myApp.alert(msg,'Error');
+              }
+          },
+          error: function (xhr, status) {
+              myApp.hidePreloader();
+              myApp.alert('Datos Incorrectos','Error');
+          }
+      });
+    
+    
 }
-function login(){
-    window.location = "login.html";
+function iniciar_session(){
+     var user = $('#user').val();
+    var pass = $('#pass').val();
+
+      myApp.showPreloader('Iniciando sesión...');
+      $.ajax({
+          dataType: 'json',
+          type: 'POST',
+          data: {
+              nombreUser: user,
+              pass: pass,
+              
+          },
+          url: 'http://servicioswebmoviles.hol.es/index.php/WS_LOGIN',
+          success: function (data, status, xhr) {
+              if(data.valido){
+                  console.log("Logeado");
+                  localStorage.setItem('id',data.data.idUsuario);
+                  localStorage.setItem('nombre_completo',data.data.nombre_completo);
+                  localStorage.setItem('email',data.data.email);
+                  localStorage.setItem('direccion',data.data.direccion);
+                  myApp.hidePreloader();
+                  gotoindex();
+              }else{
+                  myApp.hidePreloader();
+                  myApp.alert('Datos Erroneos','Error');;
+              }
+          },
+          error: function (xhr, status) {
+              myApp.hidePreloader();
+              myApp.alert('Datos Incorrectos2','Error');
+          }
+      });
+    
 
 }
 function gotoindex(){
@@ -59,7 +130,10 @@ function registro(){
 function back(){
   window.location = "login.html";  
 }
-function iniciar_session(){
+function login(){
+    window.location = "login.html";  
+}
+function iniciar_sessio(){
     var icon_name = '<i class="f7-icons" style="font-size:14px;">person</i>';
     var icon_mail = '<i class="f7-icons" style="font-size:14px;">email</i>';
 
