@@ -27,12 +27,12 @@ function registrarcuenta(){
     var direccion = $('#direccion').val();
     var nombres = $('#name').val();
     var apellidoP = $('#apellidoP').val();
-    var apellidoP = $('#apellidoP').val();
+    var apellidoM = $('#apellidoM').val();
     var email = $('#correo').val();
     var nick = $('#nick').val();
     var pass = $('#pass').val();
     myApp.showPreloader('Registrando...');
-      $.ajax({
+    $.ajax({
           dataType: 'json',
           type: 'POST',
           data: {
@@ -82,10 +82,10 @@ function iniciar_session(){
           success: function (data, status, xhr) {
               if(data.valido){
                   console.log("Logeado");
-                  localStorage.setItem('id',data.data.idUsuario);
-                  localStorage.setItem('nombre_completo',data.data.nombre_completo);
-                  localStorage.setItem('email',data.data.email);
-                  localStorage.setItem('direccion',data.data.direccion);
+                  localStorage.setItem('id',data.idUsuario);
+                  localStorage.setItem('nombre_completo',data.nombre_completo);
+                  localStorage.setItem('email',data.email);
+                  localStorage.setItem('direccion',data.direccion);
                   myApp.hidePreloader();
                   gotoindex();
               }else{
