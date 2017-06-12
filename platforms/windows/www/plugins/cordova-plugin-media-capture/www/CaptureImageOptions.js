@@ -1,4 +1,4 @@
-cordova.define("cordova-plugin-media-capture.CaptureImageOptions", function(require, exports, module) {
+﻿cordova.define("cordova-plugin-media-capture.CaptureImageOptions", function(require, exports, module) {
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
