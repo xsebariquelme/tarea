@@ -20,7 +20,14 @@ document.addEventListener("deviceready", function(){
 	$('#pet1').bind('click', notificacion);
 	$('#pet2').bind('click', notificacion);
     $('#nombre_user_session').html('<b>Hola ' + localStorage.getItem('nombre_completo') + '</b>');
+    $('#tosend').bind('click', enviada);
+
 });
+function enviada(){
+    myApp.alert('Mascota agregada', 'Animal Finder');
+    window.location = "main-init.html";
+
+}
 function notificacion(){
 	myApp.alert('Se ha enviado una notificación al dueño','Animal Finder');
 }
@@ -181,10 +188,11 @@ function iniciar_sessio(){
 function camara(){
     navigator.camera.getPicture(function(photo){
         $('#img_cam').attr('src',photo);
-        myApp.popup('.popup-registrar-mascota');
+
     }, function(error){
-        myApp.alert('Error al tomar la fotografía','SMART@APP')
+        myApp.alert('Error al tomar la fotografía','Animal Finder')
     }, {
-        quality:100
+        quality:100,
+        correctOrientation: true
     });
 }
