@@ -21,8 +21,15 @@ document.addEventListener("deviceready", function(){
 	$('#pet2').bind('click', notificacion);
     $('#nombre_user_session').html('<b>Hola ' + localStorage.getItem('nombre_completo') + '</b>');
     $('#tosend').bind('click', enviada);
+    $('#cerrarsesion').bind('click', cerrarsesion);
 
 });
+
+function cerrarsesion(){
+        window.location = "index.html";
+
+}
+
 function enviada(){
     myApp.alert('Mascota agregada', 'Animal Finder');
     window.location = "main-init.html";
