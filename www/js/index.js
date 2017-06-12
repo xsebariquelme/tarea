@@ -9,6 +9,7 @@ var mainView = myApp.addView('.view-main', {
 
 document.addEventListener("deviceready", function(){
     $("#iniciar").bind("click",login);
+     $("#camera").bind("click",camara);
     $("#btnlogin").bind("click",iniciar_session);
     $("#registro").bind("click",registro);
     $("#btnregistro").bind("click",registro);
@@ -175,4 +176,15 @@ function iniciar_sessio(){
     }else{
         myApp.alert("No hay datos ingresados", "Animal Finder");
     }
+}
+
+function camara(){
+    navigator.camera.getPicture(function(photo){
+        $('#img_cam').attr('src',photo);
+        myApp.popup('.popup-registrar-mascota');
+    }, function(error){
+        myApp.alert('Error al tomar la fotografía','SMART@APP')
+    }, {
+        quality:100
+    });
 }
