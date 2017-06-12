@@ -12,13 +12,13 @@ document.addEventListener("deviceready", function(){
     $("#btnlogin").bind("click",iniciar_session);
     $("#registro").bind("click",registro);
     $("#btnregistro").bind("click",registro);
-    $("#btnback").bind("click",gotoindex);
+    $("#btnback").bind("click", gotoindex);
     $("#registrarcuenta").bind("click",registrarcuenta);
     $("#back").bind("click",back);
 	$('#camara').bind('click', camara);
 	$('#pet1').bind('click', notificacion);
 	$('#pet2').bind('click', notificacion);
-    
+    $('#nombre_user_session').html('<b>Hola ' + localStorage.getItem('nombre_completo') + '</b>');
 });
 function notificacion(){
 	myApp.alert('Se ha enviado una notificación al dueño','Animal Finder');
@@ -65,6 +65,10 @@ function registrarcuenta(){
     
     
 }
+function gotoindex(){
+      window.location = "index.html";  
+
+}
 function iniciar_session(){
      var user = $('#user').val();
     var pass = $('#pass').val();
@@ -87,7 +91,7 @@ function iniciar_session(){
                   localStorage.setItem('email',data.email);
                   localStorage.setItem('direccion',data.direccion);
                   myApp.hidePreloader();
-                  gotoindex();
+                  conn_success();
               }else{
                   myApp.hidePreloader();
                   myApp.alert('Datos Erroneos','Error');;
@@ -101,8 +105,8 @@ function iniciar_session(){
     
 
 }
-function gotoindex(){
-        window.location = "index.html";
+function conn_success(){
+        window.location = "main-init.html";
 
 }
 function camara(){
